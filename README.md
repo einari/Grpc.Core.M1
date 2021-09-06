@@ -14,7 +14,7 @@ In addition to your Grpc package reference, just add a reference to this package
 ```xml
 <ItemGroup>
     <PackageReference Include="Grpc" Version="2.39.1" />
-    <PackageReference Include="Contrib.Grpc.Core.M1" Version="2.39.0" />
+    <PackageReference Include="Contrib.Grpc.Core.M1" Version="2.39.1" />
 </ItemGroup>
 ```
 
