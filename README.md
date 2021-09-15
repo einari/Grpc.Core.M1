@@ -13,10 +13,13 @@ In addition to your Grpc package reference, just add a reference to this package
 
 ```xml
 <ItemGroup>
-    <PackageReference Include="Grpc" Version="2.39.1" />
-    <PackageReference Include="Contrib.Grpc.Core.M1" Version="2.39.1" />
+    <PackageReference Include="Grpc" Version="2.40.0" />
+    <PackageReference Include="Contrib.Grpc.Core.M1" Version="2.40.0" />
 </ItemGroup>
 ```
+
+> Note: The version number for this package matches the official Grpc package and I'll be building from source
+> every now and then. But chances are its not critical, as it is the underlying library that is packaged.
 
 If you're leveraging another package that implicitly pulls this in, you might need to explicitly include a package
 reference to the **Grpc** package anyways - if your library works with the version this package is built for.
