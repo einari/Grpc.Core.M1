@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>Contrib.Grpc.Core.M1</id>
-    <version>2.40.0</version>
+    <version>2.41.0</version>
     <authors>The gRPC Authors; einari</authors>
     <owners>The gRPC Authors</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -15,7 +15,7 @@
     <repository type="git" url="https://github.com/einari/grpc.core.m1.git" commit="2d6b8f61cfdd1c4d2d7c1aae65a4fbf00e3e0981" />
     <dependencies>
       <group targetFramework=".NETStandard1.5">
-        <dependency id="Grpc.Core" version="2.40.0" exclude="Build,Analyzers" />
+        <dependency id="Grpc.Core" version="2.41.0" exclude="Build,Analyzers" />
         <dependency id="NETStandard.Library" version="1.6.1" exclude="Build,Analyzers" />
       </group>
       <group targetFramework=".NETStandard2.0">

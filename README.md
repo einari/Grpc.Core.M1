@@ -12,6 +12,14 @@ The future of Grpc and C# is described [here](https://grpc.io/blog/grpc-csharp-f
 This package relies on having to build a native `.dylib` and put into this folder.
 Get the tooling installed as described [here](https://github.com/grpc/grpc/blob/master/BUILDING.md#macos)
 and then perform the build using cmake as described [here](https://github.com/grpc/grpc/blob/master/BUILDING.md#building-with-cmake).
+We want to have the shared libraries, so the `cmake` process should be:
+
+```shell
+$ mkdir -p cmake/build
+$ cd cmake/build
+$ cmake ../../ -DBUILD_SHARED_LIBS=ON
+$ make
+```
 
 ## Usage
 
