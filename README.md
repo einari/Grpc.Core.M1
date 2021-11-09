@@ -7,14 +7,19 @@ The purpose of this project is to provide a prebuilt version of the needed nativ
 
 The future of Grpc and C# is described [here](https://grpc.io/blog/grpc-csharp-future/).
 
+## Building a new lib
+
+This package relies on having to build a native `.dylib` and put into this folder.
+The process for doing so is documented [here](https://github.com/grpc/grpc/blob/master/BUILDING.md#macos).
+
 ## Usage
 
 In addition to your Grpc package reference, just add a reference to this package in your *.csproj* file:
 
 ```xml
 <ItemGroup>
-    <PackageReference Include="Grpc" Version="2.40.0" />
-    <PackageReference Include="Contrib.Grpc.Core.M1" Version="2.40.0" />
+    <PackageReference Include="Grpc" Version="2.41.0" />
+    <PackageReference Include="Contrib.Grpc.Core.M1" Version="2.41.0" />
 </ItemGroup>
 ```
 
