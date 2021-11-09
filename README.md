@@ -10,7 +10,8 @@ The future of Grpc and C# is described [here](https://grpc.io/blog/grpc-csharp-f
 ## Building a new lib
 
 This package relies on having to build a native `.dylib` and put into this folder.
-The process for doing so is documented [here](https://github.com/grpc/grpc/blob/master/BUILDING.md#macos).
+Get the tooling installed as described [here](https://github.com/grpc/grpc/blob/master/BUILDING.md#macos)
+and then perform the build using cmake as described [here](https://github.com/grpc/grpc/blob/master/BUILDING.md#building-with-cmake).
 
 ## Usage
 
