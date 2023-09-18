@@ -1,5 +1,8 @@
 name: Publish
 
+env:
+  DOTNET_VERSION: "7.0.x"
+
 on:
   workflow_dispatch:
         
@@ -14,6 +17,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Setup .Net
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Set NuGet key
+        run: nuget setApiKey ${{ secrets.NUGET_API_KEY }} -source https://api.nuget.org/v3/index.json
 
       - name: Run release script
         working-directory: ./
