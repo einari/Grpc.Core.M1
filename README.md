@@ -17,8 +17,8 @@ The source for this lives [here](https://github.com/grpc/grpc).
 You then need to be on the [v1.46.x](https://github.com/grpc/grpc/tree/v1.46.x) tag to build.
 Simply do a Git checkout for the tag:
 
-```csharp
-$ git checkout -q v1.46.x
+```shell
+git checkout -q v1.46.x
 ```
 
 Get the tooling installed as described [here](https://github.com/grpc/grpc/blob/master/BUILDING.md#macos).
@@ -27,13 +27,13 @@ You'll need to use the CMAKE approach as described [here](https://github.com/grp
 Specifically you should build it using `cmake` as follows:
 
 ```shell
-$ mkdir -p cmake/build
-$ cd cmake/build
-$ cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-      -DgRPC_BACKWARDS_COMPATIBILITY_MODE=ON \
-      -DgRPC_XDS_USER_AGENT_IS_CSHARP=ON \
-      ../../
-$ make grpc_csharp_ext
+mkdir -p cmake/build
+cd cmake/build
+cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+    -DgRPC_BACKWARDS_COMPATIBILITY_MODE=ON \
+    -DgRPC_XDS_USER_AGENT_IS_CSHARP=ON \
+    ../../
+make grpc_csharp_ext
 ```
 
 Then copy the resulting `libgrpc_csharp_ext.dylib` to the `Grpc.Core.M1` folder and rename it to `libgrpc_csharp_ext.arm64.dylib`.
