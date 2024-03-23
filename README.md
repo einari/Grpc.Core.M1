@@ -5,7 +5,9 @@
 The purpose of this project is to provide a prebuilt version of the needed native **.dylib** for
  M1 CPUs when using the legacy [C# Grpc library](https://www.nuget.org/packages/Grpc.Core).
 
-The future of Grpc and C# is described [here](https://grpc.io/blog/grpc-csharp-future/).
+> Important: You should only use this if you're depending on the legacy version v1.46.x of Grpc.Core.
+> The future of Grpc and C# is described [here](https://grpc.io/blog/grpc-csharp-future/) and the Grpc.Core library is
+> deprecated and the maintenance period will possibly be ended in October 2024.
 
 ## Building a new lib
 
@@ -23,6 +25,7 @@ $ cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo \
       ../../
 $ make grpc_csharp_ext
 ```
+
 Then copy the resulting `libgrpc_csharp_ext.dylib` to the `Grpc.Core.M1` folder and rename it to `libgrpc_csharp_ext.arm64.dylib`.
 
 ## Usage
@@ -31,8 +34,8 @@ In addition to your Grpc package reference, just add a reference to this package
 
 ```xml
 <ItemGroup>
-    <PackageReference Include="Grpc" Version="2.41.0" />
-    <PackageReference Include="Contrib.Grpc.Core.M1" Version="2.41.0" />
+    <PackageReference Include="Grpc" Version="2.46.7" />
+    <PackageReference Include="Contrib.Grpc.Core.M1" Version="2.46.7" />
 </ItemGroup>
 ```
 
