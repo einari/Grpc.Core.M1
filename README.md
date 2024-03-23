@@ -14,6 +14,14 @@ The purpose of this project is to provide a prebuilt version of the needed nativ
 This package relies on having to build a native `.dylib` and put into this folder.
 Get the tooling installed as described [here](https://github.com/grpc/grpc/blob/master/BUILDING.md#macos)
 and then perform the build using cmake as described [here](https://github.com/grpc/grpc/blob/master/BUILDING.md#building-with-cmake).
+
+You then need to be on the [v1.46.x](https://github.com/grpc/grpc/tree/v1.46.x) tag to build.
+Simply do a Git checkout for the tag:
+
+```csharp
+$ git checkout -q v1.46.x
+```
+
 We want to have the shared libraries, so the `cmake` process should be:
 
 ```shell
@@ -27,6 +35,10 @@ $ make grpc_csharp_ext
 ```
 
 Then copy the resulting `libgrpc_csharp_ext.dylib` to the `Grpc.Core.M1` folder and rename it to `libgrpc_csharp_ext.arm64.dylib`.
+
+## Samples
+
+The original samples for this can be found on the **v1.46.x** tag [here](https://github.com/grpc/grpc/tree/v1.46.x/examples/csharp).
 
 ## Usage
 
