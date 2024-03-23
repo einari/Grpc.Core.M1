@@ -21,5 +21,5 @@ else
     rm *.nupkg
     nuget pack
     nuget push *.nupkg -source https://api.nuget.org/v3/index.json    
-    exit 1
+    exit 0
 fi
