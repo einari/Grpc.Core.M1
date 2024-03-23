@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>Contrib.Grpc.Core.M1</id>
-    <version>INSERTVERSION</version>
+    <version>2.46.8</version>
     <authors>The gRPC Authors; einari</authors>
     <owners>The gRPC Authors</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -12,14 +12,15 @@
     <description>Packaged ARM64 -  M1 version of native library (.dylib).</description>
     <copyright>Copyright 2021 The gRPC Authors</copyright>
     <tags>gRPC RPC HTTP/2</tags>
-    <repository type="git" url="https://github.com/einari/grpc.core.m1.git" commit="2d6b8f61cfdd1c4d2d7c1aae65a4fbf00e3e0981" />
+    <repository type="git" url="https://github.com/einari/grpc.core.m1.git" />
+    <readme>README.md</readme>
     <dependencies>
       <group targetFramework=".NETStandard1.5">
-        <dependency id="Grpc.Core" version="CURRENTVERSION" exclude="Build,Analyzers" />
+        <dependency id="Grpc.Core" version="2.46.7" exclude="Build,Analyzers" />
         <dependency id="NETStandard.Library" version="1.6.1" exclude="Build,Analyzers" />
       </group>
       <group targetFramework=".NETStandard2.0">
-        <dependency id="Grpc.Core.Api" version="CURRENTVERSION" exclude="Build,Analyzers" />
+        <dependency id="Grpc.Core.Api" version="2.46.7" exclude="Build,Analyzers" />
         <dependency id="System.Memory" version="4.5.3" exclude="Build,Analyzers" />
       </group>
     </dependencies>
@@ -28,5 +29,6 @@
   <files>
     <file src="./grpc_square_reverse_4x.png" target="."/>
     <file src="./libgrpc_csharp_ext.arm64.dylib" target="runtimes/osx-arm64/native" />
+    <file src="./README.md" target="." />
   </files>
 </package>
