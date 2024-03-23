@@ -11,11 +11,6 @@ on:
         required: true
         default: '0.0.0'
         type: string
-      release-notes:
-        description: 'Release notes'
-        required: true
-        default: 'No release notes'
-        type: string
       logLevel:
         description: 'Log level'
         required: true
@@ -45,4 +40,4 @@ jobs:
 
       - name: Run release script
         working-directory: ./
-        run: ./release.sh
+        run: ./release.sh ${{ github.event.inputs.version }}
