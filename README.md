@@ -11,9 +11,8 @@ The purpose of this project is to provide a prebuilt version of the needed nativ
 
 ## Building a new lib
 
-This package relies on having to build a native `.dylib` and put into this folder.
-Get the tooling installed as described [here](https://github.com/grpc/grpc/blob/master/BUILDING.md#macos)
-and then perform the build using cmake as described [here](https://github.com/grpc/grpc/blob/master/BUILDING.md#building-with-cmake).
+This package relies on having a native macOS`.dylib` that needs to be at the root of this repository.
+The source for this lives [here](https://github.com/grpc/grpc).
 
 You then need to be on the [v1.46.x](https://github.com/grpc/grpc/tree/v1.46.x) tag to build.
 Simply do a Git checkout for the tag:
@@ -22,7 +21,10 @@ Simply do a Git checkout for the tag:
 $ git checkout -q v1.46.x
 ```
 
-We want to have the shared libraries, so the `cmake` process should be:
+Get the tooling installed as described [here](https://github.com/grpc/grpc/blob/master/BUILDING.md#macos).
+You'll need to use the CMAKE approach as described [here](https://github.com/grpc/grpc/blob/master/BUILDING.md#building-with-cmake).
+
+Specifically you should build it using `cmake` as follows:
 
 ```shell
 $ mkdir -p cmake/build
