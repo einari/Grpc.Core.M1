@@ -17,9 +17,13 @@ We want to have the shared libraries, so the `cmake` process should be:
 ```shell
 $ mkdir -p cmake/build
 $ cd cmake/build
-$ cmake ../../ -DBUILD_SHARED_LIBS=ON
-$ make
+$ cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+      -DgRPC_BACKWARDS_COMPATIBILITY_MODE=ON \
+      -DgRPC_XDS_USER_AGENT_IS_CSHARP=ON \
+      ../../
+$ make grpc_csharp_ext
 ```
+Then copy the resulting `libgrpc_csharp_ext.dylib` to the `Grpc.Core.M1` folder and rename it to `libgrpc_csharp_ext.arm64.dylib`.
 
 ## Usage
 
