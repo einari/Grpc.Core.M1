@@ -18,7 +18,7 @@ You then need to be on the [v1.46.x](https://github.com/grpc/grpc/tree/v1.46.x) 
 Simply do a Git checkout for the tag:
 
 ```shell
-git checkout -q v1.46.x
+git checkout -q v1.46.x && git submodule update --init
 ```
 
 Get the tooling installed as described [here](https://github.com/grpc/grpc/blob/master/BUILDING.md#macos).
